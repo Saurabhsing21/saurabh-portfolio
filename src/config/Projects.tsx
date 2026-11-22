@@ -26,7 +26,7 @@ export const projects: Project[] = [
   {
     title: 'Seenlense',
     description:
-      'An AI visibility tracker that asks ChatGPT, Perplexity, Gemini and Claude real buyer questions and shows whether they recommend your brand, who they pick instead, and what to fix.',
+      'An AI visibility platform that tracks whether ChatGPT, Perplexity, Gemini and Claude recommend a brand, and which competitors they recommend instead.',
     image: '/project/seenlense.png',
     link: 'https://seenlense.com',
     technologies: [

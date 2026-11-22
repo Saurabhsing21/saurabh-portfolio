@@ -24,6 +24,42 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
+    title: 'Seenlense',
+    description:
+      'An AI visibility tracker that asks ChatGPT, Perplexity, Gemini and Claude real buyer questions and shows whether they recommend your brand, who they pick instead, and what to fix.',
+    image: '/project/seenlense.png',
+    link: 'https://seenlense.com',
+    technologies: [
+      { name: 'FastAPI', icon: <FastAPI key="fastapi" /> },
+      { name: 'Python', icon: <Python key="python" /> },
+      { name: 'PostgreSQL', icon: <PostgreSQL key="postgresql" /> },
+      { name: 'Next.js', icon: <NextJs key="nextjs" /> },
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwindcss" /> },
+    ],
+    github: 'https://github.com/Saurabhsing21/AnswerIntel-Backend',
+    live: 'https://seenlense.com',
+    details: true,
+    projectDetailsPageSlug: '/projects/seenlense',
+    isWorking: true,
+    detailContent: {
+      overview:
+        'Seenlense (built as AnswerIntel) answers one question for founders and small teams: when buyers ask AI about my category, does it recommend me, and who does it pick instead? It runs realistic buyer questions across AI engines on a schedule and turns the answers into visibility metrics and a fix list.',
+      highlightsLabel: 'Seenlense features & system architecture:',
+      highlights: [
+        'Scans buyer questions across ChatGPT, Perplexity, Gemini, Claude and Grok through one OpenRouter provider layer',
+        'Answer analysis for brand mentions, recommendation position, sentiment and cited sources',
+        'Mentions, recommendation rate and share of voice against tracked competitors, over time',
+        'Opportunities and diagnosis that explain why a competitor is picked and what to change',
+        'Scheduled re-scans, workspaces, reports and Paddle subscription billing',
+        'FastAPI modular monolith with background scan workers, PostgreSQL and JWT auth behind a Next.js same-origin proxy',
+      ],
+      outcome:
+        'A live SaaS product at seenlense.com, built and shipped solo, from scanning engine to billing and marketing site.',
+    },
+  },
+  {
     title: 'Nirdesh AI',
     description:
       'An instrumented multilingual voice agent featuring real-time speech-to-text, LangGraph tool calling, streaming TTS, and local VAD.',

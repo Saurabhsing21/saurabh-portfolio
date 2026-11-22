@@ -1,4 +1,6 @@
 import Docker from '@/components/technologies/Docker';
+import FastAPI from '@/components/technologies/FastAPI';
+import GCloud from '@/components/technologies/GCloud';
 import LangChain from '@/components/technologies/LangChain';
 import MongoDB from '@/components/technologies/MongoDB';
 import NextJs from '@/components/technologies/NextJs';
@@ -6,6 +8,7 @@ import NodeJs from '@/components/technologies/NodeJs';
 import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Python from '@/components/technologies/Python';
 import ReactIcon from '@/components/technologies/ReactIcon';
+import Redis from '@/components/technologies/Redis';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
 import Vercel from '@/components/technologies/Vercel';
@@ -16,7 +19,11 @@ export interface Technology {
   icon: React.ReactNode;
 }
 
-export type EmploymentType = 'Full Time' | 'Internship' | 'Freelance' | 'Contract';
+export type EmploymentType =
+  | 'Full Time'
+  | 'Internship'
+  | 'Freelance'
+  | 'Contract';
 
 export interface Experience {
   company: string;
@@ -37,6 +44,57 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
+  {
+    isCurrent: true,
+    isBlur: false,
+    employmentType: 'Internship',
+    company: 'Bachatt',
+    position: 'SDE Intern',
+    location: 'Gurugram, Haryana',
+    image: '/company/bachatt.png',
+    description: [
+      "Working on Bachatt's AI helpdesk: a 3-agent pipeline (Router, Executor, Generator) on Gemini that answers users' questions about withdrawals, SIPs, KYC and transactions in English, Hindi and Hinglish.",
+      'Cut helpdesk reply latency about 3x, from p50 9.4s to 3.4s and p90 16.4s to 6.2s, by merging LLM calls into one, setting thinking budgets, reusing HTTP clients and sending the reply before non-essential writes.',
+      'Built an LLM-as-a-judge that runs daily on production chats (up to 500 per run) with Gemini batch jobs and prompt caching, scoring resolution and user satisfaction (USS 1-5) and pointing to the exact flow step that failed.',
+      "Used the judge's findings to fix routing, data-grounding and language issues in the pipeline, aimed at raising USS and users' star ratings.",
+      'Built a golden dataset of 151 end-to-end test conversations over 70 test personas, run in CI as a regression gate so pipeline changes stay stable.',
+    ],
+    startDate: 'September 2026',
+    endDate: 'Present',
+    technologies: [
+      {
+        name: 'Python',
+        href: 'https://www.python.org/',
+        icon: <Python />,
+      },
+      {
+        name: 'FastAPI',
+        href: 'https://fastapi.tiangolo.com/',
+        icon: <FastAPI />,
+      },
+      {
+        name: 'PostgreSQL',
+        href: 'https://www.postgresql.org/',
+        icon: <PostgreSQL />,
+      },
+      {
+        name: 'Redis',
+        href: 'https://redis.io/',
+        icon: <Redis />,
+      },
+      {
+        name: 'Google Cloud',
+        href: 'https://cloud.google.com/',
+        icon: <GCloud />,
+      },
+      {
+        name: 'Docker',
+        href: 'https://www.docker.com/',
+        icon: <Docker />,
+      },
+    ],
+    website: 'https://bachatt.app/',
+  },
   {
     isCurrent: false,
     isBlur: false,

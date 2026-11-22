@@ -48,10 +48,9 @@ export const projects: Project[] = [
         'Seenlense (built as AnswerIntel) answers one question for founders and small teams: when buyers ask AI about my category, does it recommend me, and who does it pick instead? It runs realistic buyer questions across AI engines on a schedule and turns the answers into visibility metrics and a fix list.',
       highlightsLabel: 'Seenlense features & system architecture:',
       highlights: [
-        'Scans buyer questions across ChatGPT, Perplexity, Gemini, Claude and Grok through one OpenRouter provider layer',
-        'Answer analysis for brand mentions, recommendation position, sentiment and cited sources',
-        'Mentions, recommendation rate and share of voice against tracked competitors, over time',
-        'Opportunities and diagnosis that explain why a competitor is picked and what to change',
+        'Distributed scan engine using FastAPI, Celery and OpenRouter that runs buyer prompts across 5 LLM engines (ChatGPT, Perplexity, Gemini, Claude, Grok) with retries and cost tracking',
+        'Hybrid analysis pipeline pairing an LLM classifier with rule-based hallucination guards to extract mentions, ranking, sentiment and citations for share of voice',
+        'GEO diagnosis engine that audits AI-crawler access via an SSRF-safe fetcher, explains why a brand is missing from AI answers, drafts fixes and re-tests them',
         'Scheduled re-scans, workspaces, reports and Paddle subscription billing',
         'FastAPI modular monolith with background scan workers, PostgreSQL and JWT auth behind a Next.js same-origin proxy',
       ],

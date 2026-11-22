@@ -32,9 +32,8 @@ Seenlense (built as AnswerIntel) answers one question for founders and small tea
 
 ## Features
 
-- **Multi-engine scans**: ChatGPT, Perplexity, Gemini, Claude and Grok through one OpenRouter provider layer.
-- **Answer analysis**: Brand mentions, recommendation position, sentiment and cited sources.
-- **Competitor metrics**: Mentions, recommendation rate and share of voice over time.
-- **Opportunities**: Why a competitor gets picked and what to change.
+- **Distributed scan engine**: FastAPI, Celery and OpenRouter run buyer prompts across 5 LLM engines (ChatGPT, Perplexity, Gemini, Claude, Grok) with retries and cost tracking.
+- **Hybrid analysis pipeline**: An LLM classifier paired with rule-based hallucination guards extracts mentions, ranking, sentiment and citations for share of voice.
+- **GEO diagnosis engine**: Audits AI-crawler access via an SSRF-safe fetcher, explains why a brand is missing from AI answers, drafts fixes and re-tests them.
 - **Product**: Scheduled re-scans, workspaces, reports and Paddle subscription billing.
 - **Architecture**: FastAPI modular monolith with background scan workers, PostgreSQL and JWT auth behind a Next.js same-origin proxy.

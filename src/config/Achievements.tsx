@@ -15,17 +15,27 @@ export const achievements: Achievement[] = [
     icon: 'trophy',
   },
   {
-    title: 'Active LeetCode problem solver — consistent DSA practice',
-    organization: 'LeetCode',
-    date: 'Ongoing',
-    href: 'https://leetcode.com/u/saurabhsingh881888/',
+    title:
+      'Launched Seenlense, a live AI visibility SaaS with Paddle subscriptions, built solo, scanning 5 AI engines and growing reach with 45+ SEO pages',
+    organization: 'Seenlense',
+    date: '2026',
+    href: 'https://seenlense.com',
+    icon: 'trophy',
+  },
+  {
+    title:
+      'Led BitHive Technology as CTO, successfully delivering 10+ client projects (websites, automation tools, full-stack apps) and merging 30+ PRs',
+    organization: 'BitHive Technology',
+    date: '2024 - 2025',
+    href: 'https://www.bithive.in/',
     icon: 'medal',
   },
   {
-    title: 'Built and shipped multiple AI-powered MVPs',
-    organization: 'Personal Projects',
-    date: '2024 - 2025',
-    href: '/projects',
+    title:
+      "Contributed to open-source projects including UCSC's ENTS sensor platform, tscircuit and JSON Schema's interactive tour",
+    organization: 'Open Source',
+    date: 'Ongoing',
+    href: 'https://github.com/Saurabhsing21',
     icon: 'star',
   },
 ];
